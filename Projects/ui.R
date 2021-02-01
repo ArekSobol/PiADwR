@@ -10,7 +10,7 @@ shinyUI(dashboardPage(
     ),
   ## Sidebar content
   dashboardSidebar(
-    sidebarMenu( ## tutaj tworzymy zakładki w menu, każdy ma osobne, ale może mieć kilka
+    sidebarMenu(
       menuItem(
         text = "National statistics",
         tabName = "national_statistics"
@@ -290,11 +290,7 @@ shinyUI(dashboardPage(
               label = "check selected regions:",
               choices = regionTotal$region, 
               selected = 'Oceania'
-            )#,
-            # actionButton(
-            #   inputId = "selectAll", 
-            #   label = "Show the analysis for all the years"
-            #   )
+            )
             ),
           mainPanel(
             tabsetPanel(
